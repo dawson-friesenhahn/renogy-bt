@@ -1,0 +1,12 @@
+[Unit]
+Description=Renogy Bluetooth Service
+After=network.target bluetooth.service
+Wants=bluetooth.service
+
+[Service]
+ExecStart=/home/pi/renogy/start.sh
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target
